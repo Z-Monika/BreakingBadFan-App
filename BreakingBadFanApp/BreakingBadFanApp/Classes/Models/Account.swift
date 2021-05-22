@@ -18,7 +18,6 @@ struct Account: Codable {
 }
 
 //MARK: - Password verification -
-
 extension Account {
     var isPasswordSecure: Bool {
         guard password.count >= 8 else { return false }

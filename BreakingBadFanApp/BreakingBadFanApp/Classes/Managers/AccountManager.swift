@@ -81,7 +81,6 @@ extension AccountManager {
 }
 
 //MARK: - Log in functionality -
-
 extension AccountManager {
     
     static func loginUser(username: String?, password: String?, loginStatus: Bool) throws {
@@ -108,7 +107,6 @@ extension AccountManager {
 }
 
 //MARK: - Log out functionality -
-
 extension AccountManager {
     
     static func logoutUser() {
@@ -124,7 +122,6 @@ extension AccountManager {
 }
 
 //MARK: - Check username functionality -
-
 private extension AccountManager {
     
     static func isUsernameTaken(_ username: String) -> Bool {
@@ -141,7 +138,6 @@ private extension AccountManager {
 }
 
 //MARK: - Check password functionality -
-
 private extension AccountManager {
     
     static func isPasswordSecure(_ password: String) -> Bool {

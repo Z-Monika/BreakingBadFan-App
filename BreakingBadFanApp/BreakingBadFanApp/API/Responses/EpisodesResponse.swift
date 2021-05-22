@@ -25,6 +25,12 @@ struct Episode: Decodable, Hashable {
     let airDate: String
     let characters: [String]
     
+    var convertedAirDate: Date {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "MM-dd-yyyy"
+        return dateFormatter.date(from: airDate) ?? .distantPast
+    }
+    
     private enum CodingKeys: String, CodingKey {
         case season
         case episodeNumber = "episode"

@@ -32,7 +32,6 @@ class QuotesTableViewCell: UITableViewCell {
     
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-        print("Cell status: \(selected)")
         markAsFavorite(selected: selected)
         quoteSelectionDelegate?.didSelectQuote()
     }

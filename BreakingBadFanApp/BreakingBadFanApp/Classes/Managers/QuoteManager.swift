@@ -49,7 +49,6 @@ extension QuoteManager {
 }
 
 //MARK: - User quotes -
-
 extension QuoteManager {
     
      static var userFavoriteQuotes: [Quote] {
@@ -93,20 +92,6 @@ extension QuoteManager {
 
         return (threeQuotes: threeQuotes, threeQuotesCount: threeQuotesCount)
     }
-    
-//    static var topThreeQuotesCount: [Int] {
-//        guard let quotes = UserDefaultsManager.quotes else { return [] }
-//        var count: [Quote: Int] = [:]
-//        
-//        quotes.forEach { count[$0.quote] = (count[$0.quote] ?? 0) + 1 }
-//    
-//        let threeQuotesCount = count
-//            .sorted(by: { $0.value > $1.value })
-//            .prefix(3)
-//            .map { $0.value }
-//
-//        return threeQuotesCount
-//    }
 }
 
 

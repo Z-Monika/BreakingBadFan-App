@@ -222,8 +222,8 @@
             filePath = "BreakingBadFanApp/ViewControllers/EpisodesScreens/EpisodesPreviewViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "34"
-            endingLineNumber = "34"
+            startingLineNumber = "49"
+            endingLineNumber = "49"
             landmarkName = "viewWillAppear(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -270,10 +270,10 @@
             filePath = "BreakingBadFanApp/Classes/Managers/QuoteManager.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "55"
-            endingLineNumber = "55"
-            landmarkName = "userFavoriteQuotes"
-            landmarkType = "24">
+            startingLineNumber = "54"
+            endingLineNumber = "54"
+            landmarkName = "QuoteManager"
+            landmarkType = "21">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -327,22 +327,6 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "F6656E2F-DFA9-4C0E-8148-A1E2FC077623"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "BreakingBadFanApp/ViewControllers/CharactersScreens/CharactersPreviewViewController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "161"
-            endingLineNumber = "161"
-            landmarkName = "didApplyCharacterFilter(status:season:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             uuid = "44B29091-274D-4250-8367-9DD32AA32700"
             shouldBeEnabled = "No"
             ignoreCount = "0"
@@ -350,8 +334,8 @@
             filePath = "BreakingBadFanApp/ViewControllers/CharactersScreens/CharacterDetailsViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "178"
-            endingLineNumber = "178"
+            startingLineNumber = "181"
+            endingLineNumber = "181"
             landmarkName = "tableView(_:didSelectRowAt:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -366,8 +350,8 @@
             filePath = "BreakingBadFanApp/ViewControllers/CharactersScreens/CharacterDetailsViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "183"
-            endingLineNumber = "183"
+            startingLineNumber = "186"
+            endingLineNumber = "186"
             landmarkName = "tableView(_:didDeselectRowAt:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -398,170 +382,10 @@
             filePath = "BreakingBadFanApp/ViewControllers/CharactersScreens/CharacterDetailsViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "182"
-            endingLineNumber = "182"
+            startingLineNumber = "185"
+            endingLineNumber = "185"
             landmarkName = "tableView(_:didDeselectRowAt:)"
             landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "B300DEEB-22B1-4454-B299-6B89E6351A92"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "BreakingBadFanApp/ViewControllers/EpisodesScreens/EpisodesPreviewViewController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "201"
-            endingLineNumber = "201"
-            landmarkName = "EpisodesPreviewViewController"
-            landmarkType = "21">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "931D897B-F571-4F31-AE33-5BD42F1A7A36"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "BreakingBadFanApp/ViewControllers/FilterEpisodesPopUp/FilterEpisodesPopUpViewController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "38"
-            endingLineNumber = "38"
-            landmarkName = "applyButtonTapped(_:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "2BC32593-E075-4A22-8CFC-B5C6EB2602C7"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "BreakingBadFanApp/ViewControllers/EpisodesScreens/EpisodesPreviewViewController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "172"
-            endingLineNumber = "172"
-            landmarkName = "didApplyEpisodeFilter(season:startDate:character:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "FF6099CE-399D-4AF7-948A-3117AF1F16B4"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "BreakingBadFanApp/ViewControllers/EpisodesScreens/EpisodesPreviewViewController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "196"
-            endingLineNumber = "196"
-            landmarkName = "didApplyEpisodeFilter(season:startDate:character:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "5B743D1C-55BD-4AC1-8C50-FA1D4A25FEE8"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "BreakingBadFanApp/ViewControllers/EpisodesScreens/EpisodesPreviewViewController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "176"
-            endingLineNumber = "176"
-            landmarkName = "didApplyEpisodeFilter(season:startDate:character:)"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "5B743D1C-55BD-4AC1-8C50-FA1D4A25FEE8 - 99932d25cc8fec69"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "BreakingBadFanApp.EpisodesPreviewViewController.didApplyEpisodeFilter(season: Swift.Optional&lt;Swift.String&gt;, startDate: Swift.Optional&lt;Swift.String&gt;, character: Swift.Optional&lt;Swift.Set&lt;Swift.String&gt;&gt;) -&gt; ()"
-                  moduleName = "BreakingBadFanApp"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/monika/Documents/GitHub/Project1/BreakingBadFanApp/BreakingBadFanApp/ViewControllers/EpisodesScreens/EpisodesPreviewViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "179"
-                  endingLineNumber = "179"
-                  offsetFromSymbolStart = "3117">
-               </Location>
-               <Location
-                  uuid = "5B743D1C-55BD-4AC1-8C50-FA1D4A25FEE8 - 9d10dc4d4a7d5de8"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (BreakingBadFanApp.Season) -&gt; Swift.Bool in BreakingBadFanApp.EpisodesPreviewViewController.didApplyEpisodeFilter(season: Swift.Optional&lt;Swift.String&gt;, startDate: Swift.Optional&lt;Swift.String&gt;, character: Swift.Optional&lt;Swift.Set&lt;Swift.String&gt;&gt;) -&gt; ()"
-                  moduleName = "BreakingBadFanApp"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/monika/Documents/GitHub/Project1/BreakingBadFanApp/BreakingBadFanApp/ViewControllers/EpisodesScreens/EpisodesPreviewViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "179"
-                  endingLineNumber = "179"
-                  offsetFromSymbolStart = "37">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "79439DC3-A580-462A-9587-690D577F9A53"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "BreakingBadFanApp/ViewControllers/CharactersScreens/CharactersPreviewViewController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "164"
-            endingLineNumber = "164"
-            landmarkName = "didApplyCharacterFilter(status:season:)"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "79439DC3-A580-462A-9587-690D577F9A53 - d50544cec1a354eb"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "BreakingBadFanApp.CharactersPreviewViewController.didApplyCharacterFilter(status: Swift.Bool, season: Swift.Set&lt;Swift.Int&gt;) -&gt; ()"
-                  moduleName = "BreakingBadFanApp"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/monika/Documents/GitHub/Project1/BreakingBadFanApp/BreakingBadFanApp/ViewControllers/CharactersScreens/CharactersPreviewViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "174"
-                  endingLineNumber = "174"
-                  offsetFromSymbolStart = "315">
-               </Location>
-               <Location
-                  uuid = "79439DC3-A580-462A-9587-690D577F9A53 - c5a2079471855450"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (BreakingBadFanApp.Character) -&gt; Swift.Bool in BreakingBadFanApp.CharactersPreviewViewController.didApplyCharacterFilter(status: Swift.Bool, season: Swift.Set&lt;Swift.Int&gt;) -&gt; ()"
-                  moduleName = "BreakingBadFanApp"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/monika/Documents/GitHub/Project1/BreakingBadFanApp/BreakingBadFanApp/ViewControllers/CharactersScreens/CharactersPreviewViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "174"
-                  endingLineNumber = "174"
-                  offsetFromSymbolStart = "35">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -574,9 +398,57 @@
             filePath = "BreakingBadFanApp/ViewControllers/CharactersScreens/CharacterDetailsViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "177"
-            endingLineNumber = "177"
+            startingLineNumber = "180"
+            endingLineNumber = "180"
             landmarkName = "tableView(_:didSelectRowAt:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "265B8506-5DAD-4A35-824A-9B8BC641E003"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BreakingBadFanApp/Classes/Managers/EpisodesManager.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "38"
+            endingLineNumber = "38"
+            landmarkName = "applyFilters(episodesToFilter:season:dateFrom:dateUntil:characters:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "E8A65535-6B29-4822-BC63-EECBD67EC879"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BreakingBadFanApp/ViewControllers/CharactersScreens/CharactersPreviewViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "147"
+            endingLineNumber = "147"
+            landmarkName = "didApplyCharacterFilter(status:season:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "9C14476E-C2C3-4423-9BE8-F92F245321D1"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BreakingBadFanApp/ViewControllers/EpisodesScreens/EpisodesPreviewViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "172"
+            endingLineNumber = "172"
+            landmarkName = "didApplyEpisodeFilter(season:dateFrom:dateUntil:character:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

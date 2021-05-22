@@ -9,14 +9,27 @@ import UIKit
 
 class EpisodesPreviewViewController: ParentViewController {
     
+    private let dateFormatter = DateFormatter()
+    private var apiManager = APIManager()
     private var episodes: [Episode] = []
     private var seasons: [Season] = []
     private var allCharacters: [String] = []
     private var selectedEpisode: Episode?
-    private var episodesByDate: [Episode] = []
+    private var filteredEpisodes: [Episode] = []
     
-    private let dateFormatter = DateFormatter()
-    private var apiManager = APIManager()
+    private var firstEpisodeDate: Date {
+        guard let firstDate = episodes.first?.convertedAirDate else {
+            return EpisodesManager.firstAirDate
+        }
+        return firstDate
+    }
+    
+    private var lastEpisodeDate: Date {
+        guard let lastDate = episodes.last?.convertedAirDate else {
+            return EpisodesManager.lastAirDate
+        }
+        return lastDate
+    }
     
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var activityIndicatorView: UIActivityIndicatorView!
@@ -27,6 +40,8 @@ class EpisodesPreviewViewController: ParentViewController {
         configureTableView()
         loadEpisodes()
         loadSeasons()
+        getFirstEpisodeDate()
+        getLastEpisodeDate()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -39,6 +54,7 @@ class EpisodesPreviewViewController: ParentViewController {
         let filterEpisodesPopUpViewController = FilterEpisodesPopUpViewController()
         filterEpisodesPopUpViewController.filterEpisodeSelectionDelegate = self
         filterEpisodesPopUpViewController.characters = allCharacters
+        
         present(filterEpisodesPopUpViewController, animated: true, completion: nil)
     }
     
@@ -111,6 +127,7 @@ extension EpisodesPreviewViewController: UITableViewDelegate, UITableViewDataSou
         let episode = seasons[indexPath.section].episodes[indexPath.row]
         cell.textLabel?.text = episode.episodeTitle
         cell.detailTextLabel?.text = String("Episode No. " + episode.episodeNumber)
+        
         return cell
     }
 }
@@ -120,26 +137,10 @@ extension EpisodesPreviewViewController: UITableViewDelegate, UITableViewDataSou
 extension EpisodesPreviewViewController {
     
     private func loadSeasons() {
-        
-        for episode in episodes {
-            var seasonNumber = episode.season
-            
-            if seasonNumber == " 1" {
-                seasonNumber = "1"
-            }
-                        
-            if let season = seasons.first(where: { $0.season == seasonNumber}) {
-                season.episodes.append(episode)
-            } else {
-                let season = Season(season: seasonNumber, episodes: [episode])
-                seasons.append(season)
-            }
-        }
-        seasons.sort { $0.season < $1.season }
+        seasons = EpisodesManager.groupEpisodesBySeason(episodes: episodes)
     }
     
     private func loadAllCharacters() {
-        
         for episode in episodes {
             allCharacters += episode.characters
             allCharacters = allCharacters.removingDuplicates()
@@ -168,70 +169,25 @@ extension EpisodesPreviewViewController {
 //MARK: - Episodes filter delegate implementation -
 
 extension EpisodesPreviewViewController: FilterEpisodeSelectionDelegate {
-    
-    func didApplyEpisodeFilter(season: String?, startDate: String?, character: Set<String>?) {
-        if let character = character,
-           let season = season {
-    
-            seasons = seasons.filter { $0.season == season }
-            episodes = episodes
-                .filter { $0.characters.contains(where: { character.contains($0) })  }
+    func didApplyEpisodeFilter(season: String?, dateFrom: String?, dateUntil: String?, character: Set<String>?) {
+        seasons = []
+        
+        episodes = EpisodesManager.applyFilters(episodesToFilter: episodes, season: season, dateFrom: dateFrom, dateUntil: dateUntil, characters: character)
+                
+        episodes = episodes.removingDuplicates()
+        loadSeasons()
 
-            for episode in episodes {
-                var seasonNumber = episode.season
+        tableView.reloadData()
+    }
+}
+//MARK: - Helpers -
 
-                if seasonNumber == " 1" {
-                    seasonNumber = "1"
-                }
-
-                if let season = seasons.first(where: { $0.season == seasonNumber}) {
-                    season.episodes.append(episode)
-                } else {
-                    let season = Season(season: seasonNumber, episodes: [episode])
-                    seasons.append(season)
-                }
-            }
-            episodes = episodes.removingDuplicates()
-            seasons.sort { $0.season < $1.season }
-            tableView.reloadData()
-        }
+extension EpisodesPreviewViewController {
+    private func getFirstEpisodeDate() {
+        EpisodesManager.firstAirDate = firstEpisodeDate
     }
     
-    /*
-    func didApplyEpisodeDateFilter(startDate: String?, endDate: String?) {
-        dateFormatter.dateFormat = "MM-dd-yyyy"
-        
-        if let startDate = startDate,
-           let endDate = endDate,
-           let formattedStartDate = dateFormatter.date(from: startDate),
-           let formattedEndDate = dateFormatter.date(from: endDate) {
-            
-            let range = formattedStartDate...formattedEndDate
-            
-            for episode in episodes {
-                var seasonNumber = episode.season
-                
-                if seasonNumber == " 1" {
-                    seasonNumber = "1"
-                }
-                
-                guard let episodeAirDate = dateFormatter.date(from: episode.airDate) else { continue }
-                
-                if range.contains(episodeAirDate) {
-                    episodesByDate.append(episode)
-                }
-                episodes = episodesByDate
-
-                if let season = seasons.first(where: { $0.season == seasonNumber }) {
-                    season.episodes.append(episode)
-                } else {
-                    let season = Season(season: seasonNumber, episodes: [episode])
-                    seasons.append(season)
-                }
-            }
-            episodes = episodes.removingDuplicates()
-            seasons.sort { $0.season < $1.season }
-            tableView.reloadData()
-        }
-    } */
+    private func getLastEpisodeDate() {
+        EpisodesManager.lastAirDate = lastEpisodeDate
+    }
 }

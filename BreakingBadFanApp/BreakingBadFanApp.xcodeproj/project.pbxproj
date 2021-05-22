@@ -18,6 +18,9 @@
 		5D04521D25EBD33E002219BB /* CharactersResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D04521C25EBD33E002219BB /* CharactersResponse.swift */; };
 		5D04522225EBFAE6002219BB /* FilterCharactersPopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D04522025EBFAE6002219BB /* FilterCharactersPopUpViewController.swift */; };
 		5D04522325EBFAE6002219BB /* FilterCharactersPopUpViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5D04522125EBFAE6002219BB /* FilterCharactersPopUpViewController.xib */; };
+		5D241FFC2659579600048C34 /* FilterDatePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D241FFB2659579600048C34 /* FilterDatePicker.swift */; };
+		5D241FFF265957A600048C34 /* FilterDateToolbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D241FFE265957A600048C34 /* FilterDateToolbar.swift */; };
+		5D414762265801A2004D23E4 /* EpisodesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D414761265801A2004D23E4 /* EpisodesManager.swift */; };
 		5D6C8B2E25EC34D7004D5BA8 /* CharacterTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D6C8B2C25EC34D7004D5BA8 /* CharacterTableViewCell.swift */; };
 		5D6C8B2F25EC34D7004D5BA8 /* CharacterTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5D6C8B2D25EC34D7004D5BA8 /* CharacterTableViewCell.xib */; };
 		5D6C8B3A25EC3CE0004D5BA8 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D6C8B3925EC3CE0004D5BA8 /* UIView.swift */; };
@@ -26,7 +29,7 @@
 		5D6C8B4225ED6C1C004D5BA8 /* SeasonTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5D6C8B4025ED6C1C004D5BA8 /* SeasonTableViewCell.xib */; };
 		5D8D267925F13593002E46F5 /* FavoriteQuote.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D8D267825F13593002E46F5 /* FavoriteQuote.swift */; };
 		5D8D267D25F13E40002E46F5 /* QuotesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D8D267C25F13E40002E46F5 /* QuotesViewController.swift */; };
-		5D971BE4262B1A6C001A95E2 /* CharacterGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D971BE3262B1A6C001A95E2 /* CharacterGroup.swift */; };
+		5D971BE4262B1A6C001A95E2 /* CharacterManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D971BE3262B1A6C001A95E2 /* CharacterManager.swift */; };
 		5DB90CE325EED0FB00120CF4 /* QuotesResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DB90CE225EED0FB00120CF4 /* QuotesResponse.swift */; };
 		5DB90CE725EEE8AA00120CF4 /* QuotesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DB90CE525EEE8AA00120CF4 /* QuotesTableViewCell.swift */; };
 		5DB90CE825EEE8AA00120CF4 /* QuotesTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5DB90CE625EEE8AA00120CF4 /* QuotesTableViewCell.xib */; };
@@ -62,6 +65,9 @@
 		5D04521C25EBD33E002219BB /* CharactersResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersResponse.swift; sourceTree = "<group>"; };
 		5D04522025EBFAE6002219BB /* FilterCharactersPopUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterCharactersPopUpViewController.swift; sourceTree = "<group>"; };
 		5D04522125EBFAE6002219BB /* FilterCharactersPopUpViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FilterCharactersPopUpViewController.xib; sourceTree = "<group>"; };
+		5D241FFB2659579600048C34 /* FilterDatePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterDatePicker.swift; sourceTree = "<group>"; };
+		5D241FFE265957A600048C34 /* FilterDateToolbar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterDateToolbar.swift; sourceTree = "<group>"; };
+		5D414761265801A2004D23E4 /* EpisodesManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodesManager.swift; sourceTree = "<group>"; };
 		5D6C8B2C25EC34D7004D5BA8 /* CharacterTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterTableViewCell.swift; sourceTree = "<group>"; };
 		5D6C8B2D25EC34D7004D5BA8 /* CharacterTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CharacterTableViewCell.xib; sourceTree = "<group>"; };
 		5D6C8B3925EC3CE0004D5BA8 /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
@@ -70,7 +76,7 @@
 		5D6C8B4025ED6C1C004D5BA8 /* SeasonTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SeasonTableViewCell.xib; sourceTree = "<group>"; };
 		5D8D267825F13593002E46F5 /* FavoriteQuote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteQuote.swift; sourceTree = "<group>"; };
 		5D8D267C25F13E40002E46F5 /* QuotesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuotesViewController.swift; sourceTree = "<group>"; };
-		5D971BE3262B1A6C001A95E2 /* CharacterGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterGroup.swift; sourceTree = "<group>"; };
+		5D971BE3262B1A6C001A95E2 /* CharacterManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterManager.swift; sourceTree = "<group>"; };
 		5DB90CE225EED0FB00120CF4 /* QuotesResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuotesResponse.swift; sourceTree = "<group>"; };
 		5DB90CE525EEE8AA00120CF4 /* QuotesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuotesTableViewCell.swift; sourceTree = "<group>"; };
 		5DB90CE625EEE8AA00120CF4 /* QuotesTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = QuotesTableViewCell.xib; sourceTree = "<group>"; };
@@ -141,6 +147,8 @@
 			children = (
 				5D0133EE25EAB4C600BDF1F7 /* FilterEpisodesPopUpViewController.swift */,
 				5D0133EF25EAB4C600BDF1F7 /* FilterEpisodesPopUpViewController.xib */,
+				5D241FFB2659579600048C34 /* FilterDatePicker.swift */,
+				5D241FFE265957A600048C34 /* FilterDateToolbar.swift */,
 			);
 			path = FilterEpisodesPopUp;
 			sourceTree = "<group>";
@@ -310,7 +318,8 @@
 				5DBD543425E6D61700F04C7D /* AccountManager.swift */,
 				5DBD543A25E6D9D300F04C7D /* UserDefaultsManager.swift */,
 				5DB90CEC25F10CFE00120CF4 /* QuoteManager.swift */,
-				5D971BE3262B1A6C001A95E2 /* CharacterGroup.swift */,
+				5D971BE3262B1A6C001A95E2 /* CharacterManager.swift */,
+				5D414761265801A2004D23E4 /* EpisodesManager.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -436,10 +445,13 @@
 				5DBD540F25E6B60600F04C7D /* SceneDelegate.swift in Sources */,
 				5DBD545825E831BB00F04C7D /* EpisodeDetailsViewController.swift in Sources */,
 				5D0133DB25E97F8E00BDF1F7 /* APIManager.swift in Sources */,
+				5D241FFC2659579600048C34 /* FilterDatePicker.swift in Sources */,
+				5D414762265801A2004D23E4 /* EpisodesManager.swift in Sources */,
 				5D8D267D25F13E40002E46F5 /* QuotesViewController.swift in Sources */,
 				5DB90CED25F10CFF00120CF4 /* QuoteManager.swift in Sources */,
+				5D241FFF265957A600048C34 /* FilterDateToolbar.swift in Sources */,
 				5D04522225EBFAE6002219BB /* FilterCharactersPopUpViewController.swift in Sources */,
-				5D971BE4262B1A6C001A95E2 /* CharacterGroup.swift in Sources */,
+				5D971BE4262B1A6C001A95E2 /* CharacterManager.swift in Sources */,
 				5D04521D25EBD33E002219BB /* CharactersResponse.swift in Sources */,
 				5D6C8B4125ED6C1C004D5BA8 /* SeasonTableViewCell.swift in Sources */,
 				5D6C8B3A25EC3CE0004D5BA8 /* UIView.swift in Sources */,

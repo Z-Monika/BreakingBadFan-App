@@ -20,7 +20,6 @@ class FilterCharactersPopUpViewController: ParentViewController {
     @IBOutlet weak var popUpView: UIView!
     @IBOutlet weak var characterStatusSwitch: UISwitch!
     @IBOutlet weak var characterStatusControl: UISegmentedControl!
-    
     @IBOutlet weak var tableView: UITableView!
     
     override func viewDidLoad() {
@@ -34,7 +33,6 @@ class FilterCharactersPopUpViewController: ParentViewController {
         dismiss(animated: true, completion: nil)
     }
 }
-
 //MARK: - Set up table view -
 
 extension FilterCharactersPopUpViewController: UITableViewDelegate, UITableViewDataSource {
@@ -75,7 +73,6 @@ extension FilterCharactersPopUpViewController: UITableViewDelegate, UITableViewD
         if cell.isSelected {
             selectedSeasons.insert(selectedSeasonNumber)
         }
-        print("selectedSeasons: \(selectedSeasons)")
     }
     
     func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
@@ -84,8 +81,6 @@ extension FilterCharactersPopUpViewController: UITableViewDelegate, UITableViewD
         if selectedSeasons.contains(deselectedSeasonNumber) {
             selectedSeasons.remove(deselectedSeasonNumber)
         }
-        print("selectedSeasons: \(selectedSeasons)")
-
     }
 }
 

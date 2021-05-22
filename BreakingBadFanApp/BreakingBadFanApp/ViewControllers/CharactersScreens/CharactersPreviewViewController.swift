@@ -8,22 +8,21 @@
 import UIKit
 
 class CharactersPreviewViewController: ParentViewController {
-
+    
+    private var apiManager = APIManager()
     private var characters: [Character] = []
     private var filteredCharacters: [Character] = []
     private var selectedCharacter: Character?
     private var allSeasons: [Int] = []
     var characterGroups: [CharacterGroup] = []
 
-    private var apiManager = APIManager()
-    
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var activityIndicatorView: UIActivityIndicatorView!
     @IBOutlet weak var filterCharactersButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        configureTableView()
+        setTableViewDelegates()
         loadCharacters()
     }
     
@@ -37,6 +36,7 @@ class CharactersPreviewViewController: ParentViewController {
         let filterCharactersPopUpViewController = FilterCharactersPopUpViewController()
         filterCharactersPopUpViewController.filterCharacterSelectionDelegate = self
         filterCharactersPopUpViewController.seasons = allSeasons
+        
         present(filterCharactersPopUpViewController, animated: true, completion: nil)
     }
     
@@ -77,16 +77,7 @@ extension CharactersPreviewViewController {
     }
     
     private func loadCharactersAlphabetically() {
-        for character in characters {
-            let firstLetter = String(character.name.first!)
-            if let group = characterGroups.first(where: { $0.title == firstLetter }) {
-                group.characters.append(character)
-            } else {
-                let group = CharacterGroup(title: firstLetter, characters: [character])
-                characterGroups.append(group)
-            }
-        }
-        characterGroups.sort { $0.title < $1.title }
+        characterGroups = CharacterManager.groupCharactersAlphabetically(characters: characters)
     }
     
     private func loadAllSeasons() {
@@ -100,7 +91,7 @@ extension CharactersPreviewViewController {
 
 extension CharactersPreviewViewController: UITableViewDelegate, UITableViewDataSource {
     
-    private func configureTableView() {
+    private func setTableViewDelegates() {
         tableView.dataSource = self
         tableView.delegate = self
     }
@@ -116,21 +107,19 @@ extension CharactersPreviewViewController: UITableViewDelegate, UITableViewDataS
     }
     
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-//        return self.tableView(tableView, numberOfRowsInSection: section) > 0 ? "Characters" : nil
         return characterGroups[section].title
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-//        characters.count
         characterGroups[section].characters.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "CharactersCell", for: indexPath)
-//        let character = characters[indexPath.row]
         let character = characterGroups[indexPath.section].characters[indexPath.row]
 
         cell.textLabel?.text = character.name
+        
         return cell
     }
 }
@@ -139,7 +128,6 @@ extension CharactersPreviewViewController: UITableViewDelegate, UITableViewDataS
 extension CharactersPreviewViewController {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        let character = characters[indexPath.row]
         let character = characterGroups[indexPath.section].characters[indexPath.row]
         selectedCharacter = character
         performSegue(withIdentifier: "showCharactersDetails", sender: self)
@@ -158,15 +146,9 @@ extension CharactersPreviewViewController: FilterCharacterSelectionDelegate {
 
     func didApplyCharacterFilter(status: Bool, season: Set<Int>) {
         characterGroups = []
-        let characterStatus = status ? "Alive" : "Deceased"
-
-        if season == [] {
-            characters = characters.filter { $0.status == characterStatus }
-        } else {
-            characters = characters
-                .filter { $0.appearedInSeason.contains(where: { season.contains($0) }) }
-                .filter { $0.status == characterStatus }
-        }
+        
+        characters = CharacterManager.applyFilters(status: status, seasons: season, charactersToFilter: characters)
+        
         characters = characters.removingDuplicates()
         loadCharactersAlphabetically()
         tableView.reloadData()

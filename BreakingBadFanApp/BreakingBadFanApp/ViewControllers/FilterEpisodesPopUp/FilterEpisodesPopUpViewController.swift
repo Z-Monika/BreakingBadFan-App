@@ -8,8 +8,7 @@
 import UIKit
 
 protocol FilterEpisodeSelectionDelegate: AnyObject {
-    func didApplyEpisodeFilter(season: String?, startDate: String?, character: Set<String>?)
-//    func didApplyEpisodeDateFilter()
+    func didApplyEpisodeFilter(season: String?, dateFrom: String?, dateUntil: String?, character: Set<String>?)
 }
 
 class FilterEpisodesPopUpViewController: ParentViewController {
@@ -18,12 +17,16 @@ class FilterEpisodesPopUpViewController: ParentViewController {
     private var apiManager = APIManager()
     var characters: [String] = []
     var selectedCharacters: Set<String> = []
-    var selectedDate: String?
+    var selectedDateFrom: String?
+    var selectedDateUntil: String?
+
+    private lazy var toolBar = FilterDateToolbar()
+    private lazy var datePicker = FilterDatePicker()
     
+    @IBOutlet weak var dateFromButton: UIButton!
+    @IBOutlet weak var dateUntilButton: UIButton!
     @IBOutlet weak var popUpView: UIView!
     @IBOutlet weak var seasonNoTextField: UITextField!
- 
-    @IBOutlet weak var airDatePicker: UIDatePicker!
     @IBOutlet weak var tableView: UITableView!
     
     override func viewDidLoad() {
@@ -34,24 +37,19 @@ class FilterEpisodesPopUpViewController: ParentViewController {
     }
     
     @IBAction func applyButtonTapped(_ sender: UIButton) {
-//        filterEpisodeSelectionDelegate?.didApplyEpisodeDateFilter(startDate: selectedDate)
-        filterEpisodeSelectionDelegate?.didApplyEpisodeFilter(season: seasonNoTextField.text, startDate: selectedDate, character: selectedCharacters)
-        print("Season selected: \(seasonNoTextField.text)")
+        filterEpisodeSelectionDelegate?.didApplyEpisodeFilter(season: seasonNoTextField.text, dateFrom: selectedDateFrom, dateUntil: selectedDateUntil, character: selectedCharacters)
+
         dismiss(animated: true, completion: nil)
     }
     
-    @IBAction func datePickerValueSelected(_ sender: UIDatePicker) {
-        
-        print("Date selected \(sender.date)")
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "MM-dd-yyyy"
-        let formattedDate = dateFormatter.string(from: sender.date)
-        selectedDate = formattedDate
-        
-        print("Date converted to: \(formattedDate). selectedDate: \(String(describing: selectedDate))")
+    @IBAction func dateFromButtonTapped(_ sender: Any) {
+        showDateFromPickerView()
+    }
+    
+    @IBAction func dateUntilButtonTapped(_ sender: Any) {
+        showDateUntilFromPickerView()
     }
 }
-
 //MARK: - Set up table view -
 
 extension FilterEpisodesPopUpViewController: UITableViewDelegate, UITableViewDataSource {
@@ -103,14 +101,132 @@ extension FilterEpisodesPopUpViewController: UITableViewDelegate, UITableViewDat
     }
 }
 
+//MARK: - Set up date picker view
+extension FilterEpisodesPopUpViewController {
+    private func showDateFromPickerView() {
+        setDateRange()
+        
+        self.view.addSubview(datePicker)
+        self.view.addSubview(toolBar)
+
+        let doneButton = UIBarButtonItem(
+            title: "Done",
+            style: .done,
+            target: self,
+            action: #selector(dateFromPickerDoneButtonPressed)
+        )
+
+        let cancelButton = UIBarButtonItem(
+            title: "Cancel",
+            style: .done,
+            target: self,
+            action: #selector(dateFromPickerCancelButtonPressed)
+        )
+
+        doneButton.tintColor = .white
+        cancelButton.tintColor = .white
+
+        toolBar.items = [
+            doneButton,
+            UIBarButtonItem(systemItem: .flexibleSpace),
+            cancelButton
+        ]
+    }
+    
+    @objc func dateFromPickerDoneButtonPressed() {
+        let selectedValue = datePicker.date
+        let dateFormater = setDateFormater()
+        selectedDateFrom = dateFormater.string(from: selectedValue)
+        dateFromButton.setTitle(selectedDateFrom, for: .normal)
+        removeFromSuperView()
+    }
+    
+    @objc func dateFromPickerCancelButtonPressed() {
+        selectedDateFrom = nil
+        dateFromButton.setTitle("Date from", for: .normal)
+        removeFromSuperView()
+    }
+    
+    private func showDateUntilFromPickerView() {
+        setDateUntilPickerDateRange()
+        
+        self.view.addSubview(datePicker)
+        self.view.addSubview(toolBar)
+
+        let doneButton = UIBarButtonItem(
+            title: "Done",
+            style: .done,
+            target: self,
+            action: #selector(dateUntilPickerDoneButtonPressed)
+        )
+
+        let cancelButton = UIBarButtonItem(
+            title: "Cancel",
+            style: .done,
+            target: self,
+            action: #selector(dateUntilPickerCancelButtonPressed)
+        )
+
+        doneButton.tintColor = .white
+        cancelButton.tintColor = .white
+
+        toolBar.items = [
+            doneButton,
+            UIBarButtonItem(systemItem: .flexibleSpace),
+            cancelButton
+        ]
+    }
+    
+    @objc func dateUntilPickerDoneButtonPressed() {
+        let selectedValue = datePicker.date
+        let dateFormater = setDateFormater()
+        selectedDateUntil = dateFormater.string(from: selectedValue)
+        dateUntilButton.setTitle(selectedDateUntil, for: .normal)
+        removeFromSuperView()
+    }
+    
+    @objc func dateUntilPickerCancelButtonPressed() {
+        selectedDateUntil = nil
+        dateUntilButton.setTitle("Date until", for: .normal)
+        removeFromSuperView()
+    }
+    
+    private func setDateRange() {
+        datePicker.minimumDate = EpisodesManager.firstAirDate
+        datePicker.maximumDate = EpisodesManager.lastAirDate
+    }
+    
+    private func setDateUntilPickerDateRange() {
+        let dateFormater = DateFormatter()
+        dateFormater.dateFormat = "MM-dd-yyyy"
+        
+        if let selectedDateFrom = selectedDateFrom {
+            datePicker.minimumDate = dateFormater.date(from: selectedDateFrom)
+        } else {
+            datePicker.minimumDate = EpisodesManager.firstAirDate
+        }
+        datePicker.maximumDate = EpisodesManager.lastAirDate
+    }
+    
+    private func setDateFormater() -> DateFormatter {
+        let dateFormater = DateFormatter()
+        dateFormater.dateFormat = "MM-dd-yyyy"
+        return dateFormater
+    }
+    
+    private func removeFromSuperView() {
+        toolBar.removeFromSuperview()
+        datePicker.removeFromSuperview()
+    }
+}
 //MARK: - Configure view -
 extension FilterEpisodesPopUpViewController {
     
     private func configureView() {
         popUpView.layer.cornerRadius = 8
         tableView.layer.cornerRadius = 8
-        airDatePicker.layer.cornerRadius = 16
-        airDatePicker.setValue(UIColor.white, forKey: "textColor")
+        dateFromButton.layer.cornerRadius = 16
+        dateUntilButton.layer.cornerRadius = 16
     }
     
     private func loadCharactersAlphabetically() {

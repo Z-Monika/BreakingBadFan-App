@@ -100,10 +100,13 @@ extension CharacterDetailsViewController {
 extension CharacterDetailsViewController {
     
     private func configureView() {
-        guard let firstCharacterName = character.first?.name,
-              let firstCharacterBirthday = character.first?.birthday,
-              let firstCharacterImage = character.first?.image
-        else { return }
+        guard
+            let firstCharacterName = character.first?.name,
+            let firstCharacterBirthday = character.first?.birthday,
+            let firstCharacterImage = character.first?.image
+        else {
+            return
+        }
         
         setBackgroundImage(with: firstCharacterImage)
         setCharacterNameLabel(with: firstCharacterName)

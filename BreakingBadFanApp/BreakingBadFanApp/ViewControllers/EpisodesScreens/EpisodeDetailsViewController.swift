@@ -73,6 +73,7 @@ extension EpisodeDetailsViewController: UITableViewDelegate, UITableViewDataSour
         let cell = tableView.dequeueReusableCell(withIdentifier: "EpisodeCharactersCell", for: indexPath)
         let character = selectedEpisode?.characters[indexPath.row]
         cell.textLabel?.text = character
+        
         return cell
     }
 }

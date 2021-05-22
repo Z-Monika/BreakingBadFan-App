@@ -32,7 +32,7 @@
                         <imageReference key="image" image="heart" catalog="system" symbolScale="small"/>
                         <imageReference key="highlightedImage" image="heart.fill" catalog="system" symbolScale="small"/>
                     </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fpM-rW-uQi">
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fpM-rW-uQi">
                         <rect key="frame" x="265" y="11.5" width="35" height="21"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="35" id="4En-Ew-mJk"/>
