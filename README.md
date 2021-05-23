@@ -1,9 +1,9 @@
 # Code Academy 2021 - Project 1 
 # BreakingBadFan-App
 
-The main idea of Breaking Bad Fan iOS application is to allow users to explore episodes and characters of the show. In the App users can save and revisit their favorite quotes as well as those of other users of the application. 
+The main idea of the Breaking Bad Fan iOS application is to allow users to explore episodes and characters of the show. In the App, users can save and revisit their favorite quotes of the show's characters as well as those of other users of the application. 
 
-The Breaking Bad Fan Application was developed following the requirements provided by CodeAcademy iOS advanced course. The aim was to demonstrate the skills and principles learned during the first part of the course. These, among others, include: 
+The Breaking Bad Fan Application was developed following the requirements provided by CodeAcademy iOS Advanced Course. The aim was to demonstrate the skills and principles learned during the first part of the course. These, among others, include: 
 
 Standard UIKit Framework Elements
 Creating UI Elements using Xibs and Storyboards
@@ -14,59 +14,52 @@ Data Persistence using User Defaults and Keychain
 
 This application uses Breaking Bad API: @ https://breakingbadapi.com.     
 
-# Scenes
+# Screens
 
-## Registration/Login and Home scenes
+## Registration/Login and Home screen
 
-Logged in user is  remembered between application restarts, until the user logs out.
+A logged in user is remembered between application restarts, until the user logs out.
 
 <img src="https://github.com/Z-Monika/BreakingBadFan-App/blob/main/BreakingBadFanAppScreens/Registration_Login_scene.png" height="500"> <img src="https://github.com/Z-Monika/BreakingBadFan-App/blob/main/BreakingBadFanAppScreens/Home_scene.png" height="500">
 
-## Episodes and Episode details scenes
+## Episodes and Episode details screen
 
-The screen displays the list of episodes grouped by seasons. Upon selecting an episode, episode detail scene is presented to the user. It provides  further details about the episode and a list of characters that appeared in the selected episode. If user selects a character, he/she is taken to the character detail view, where character's famous quotes are displayed. 
-
-Episode detail scene provides further details about the episode to the user and a list of characters that appeared in the selected episode. Upon selecting a character, character detail scene is presented to the user, where character's famous quotes are displayed. 
-
+The screen displays the list of episodes grouped by seasons. Upon selecting an episode, an episode detail screen is presented to the user. It provides further details about the episode and a list of characters that appeared in the selected episode. If the user selects a character, he/she is taken to the character detail view, where the famous quotes of the character are displayed. 
 
 <img src="https://github.com/Z-Monika/BreakingBadFan-App/blob/main/BreakingBadFanAppScreens/Episodes_scene.png" height="500"> <img src="https://github.com/Z-Monika/BreakingBadFan-App/blob/main/BreakingBadFanAppScreens/Episode_details_scene.png" height="500">
 
-## Filter Episodes scene
+## Filter Episodes screen
 
-User can filter episodes by multiple criteria. Notably by:
-
+A user can filter episodes by multiple criteria, such as:
 - Season
-- From and to air dates
+- Airing dates
 - Character appearances
 
 <img src="https://github.com/Z-Monika/BreakingBadFan-App/blob/main/BreakingBadFanAppScreens/Filter_episodes_scene.png" height="500">
 
-## Characters and Character details scenes
+## Characters and Character details screens
 
-The screen displays the list of characters grouped alphabetically. When character is selected user is provided with further details about the character as well as character's favorite quotes. Upon selecting a character, character detail scene is presented to the user, where character's famous quotes are displayed. 
-
-Character detail scene provides further details about the character to the user and a list of character's famous quotes. User can save favorite quotes.  If a quote is already included among user's favotires, a filled heart icon is displayed next to the quote. 
+This screen displays the list of characters grouped alphabetically. When a character is selected, the user is provided with the character detail screen. It offers further details about the character to the user and a list of character's famous quotes. Here, a user can save their favorite quotes.  If a quote is already included among user's favorites, a filled heart icon is displayed next to the quote. 
 
 <img src="https://github.com/Z-Monika/BreakingBadFan-App/blob/main/BreakingBadFanAppScreens/Characters_scene.png" height="500"> <img src="https://github.com/Z-Monika/BreakingBadFan-App/blob/main/BreakingBadFanAppScreens/Character_details_scene.png" height="500">
 
-## Filter Characters scene
+## Filter Characters screen
 
-User can filter characters by multiple criteria. Notably by:
-
+A user can filter characters by multiple criteria. Notably by:
 - Character life status (i.e. alive or deceased)
 - Season fetures
 
 <img src="https://github.com/Z-Monika/BreakingBadFan-App/blob/main/BreakingBadFanAppScreens/Filter_characters_sce%20ne.png" height="500">
 
-## Quotes Scene
+## Quotes Screen
 
-The quotes scene has theee sections: 
-- **Top 3 favorite quotes**. It displays the quote and the number of users who have liked this quote. 
-- **User own quotes**. 
+The quotes screen has theee sections: 
+- **Top 3 favorite quotes**. It displays thee most liked quotes and the number of users who have liked each of these quotes. 
+- **User own quotes**. The user can manage their quotes, by deleting some from already saved ones or adding news ones from the Top 3 list and/or from the random quote section.
 - **A random quote**. It loads a random quotes from the API. 
 
 <img src="https://github.com/Z-Monika/BreakingBadFan-App/blob/main/BreakingBadFanAppScreens/Quotes_scene.png" height="500">
 
 # Release
 
-The work was submitted for revision on **2021-03-08**
+The work was submitted for revision on **2021-03-08**. It was evaluated on three criteria: **user side**, **code functionality** and **code cleanliness**.
