@@ -1,16 +1,16 @@
 # Code Academy 2021 - Project 1 
 # BreakingBadFan-App
 
-The main idea of the Breaking Bad Fan iOS application is to allow users to explore episodes and characters of the show. In the App, users can save and revisit their favorite quotes of the show's characters as well as those of other users of the application. 
+The main idea of the Breaking Bad Fan iOS application is to allow users to explore episodes and characters of the show. In the App, users can save and revisit their favorite quotes of the show's characters. They can also see which quotes are most liked by the other users of the application. 
 
 The Breaking Bad Fan Application was developed following the requirements provided by CodeAcademy iOS Advanced Course. The aim was to demonstrate the skills and principles learned during the first part of the course. These, among others, include: 
 
-Standard UIKit Framework Elements
-Creating UI Elements using Xibs and Storyboards
-Networking
-Parsing Data with JSON
-Delegate Pattern
-Data Persistence using User Defaults and Keychain
+- Standard UIKit Framework Elements
+- Creating UI Elements using Xibs and Storyboards
+- Networking
+- Parsing Data with JSON
+- Delegate Pattern
+- Data Persistence using User Defaults and Keychain
 
 This application uses Breaking Bad API: @ https://breakingbadapi.com.     
 
@@ -18,9 +18,9 @@ This application uses Breaking Bad API: @ https://breakingbadapi.com.
 
 ## Registration/Login and Home screen
 
-A logged in user is remembered between application restarts, until the user logs out.
-
 <img src="https://github.com/Z-Monika/BreakingBadFan-App/blob/main/BreakingBadFanAppScreens/Registration_Login_scene.png" height="500"> <img src="https://github.com/Z-Monika/BreakingBadFan-App/blob/main/BreakingBadFanAppScreens/Home_scene.png" height="500">
+
+A logged in user is remembered between application restarts, until the user logs out.
 
 ## Episodes and Episode details screen
 
@@ -39,13 +39,13 @@ A user can filter episodes by multiple criteria, such as:
 
 ## Characters and Character details screens
 
-This screen displays the list of characters grouped alphabetically. When a character is selected, the user is provided with the character detail screen. It offers further details about the character to the user and a list of character's famous quotes. Here, a user can save their favorite quotes.  If a quote is already included among user's favorites, a filled heart icon is displayed next to the quote. 
+This screen displays the list of characters grouped alphabetically. When a character is selected, the user is provided with the character detail screen. It offers further details about the character and a list of character's famous quotes. Here, a user can save their favorite quotes.  If a quote is already included among user's favorites, a filled heart icon is displayed next to the quote. 
 
 <img src="https://github.com/Z-Monika/BreakingBadFan-App/blob/main/BreakingBadFanAppScreens/Characters_scene.png" height="500"> <img src="https://github.com/Z-Monika/BreakingBadFan-App/blob/main/BreakingBadFanAppScreens/Character_details_scene.png" height="500">
 
 ## Filter Characters screen
 
-A user can filter characters by multiple criteria. Notably by:
+A user can filter characters by multiple criteria, such as:
 - Character life status (i.e. alive or deceased)
 - Season fetures
 
@@ -55,8 +55,9 @@ A user can filter characters by multiple criteria. Notably by:
 
 The quotes screen has theee sections: 
 - **Top 3 favorite quotes**. It displays thee most liked quotes and the number of users who have liked each of these quotes. 
-- **User own quotes**. The user can manage their quotes, by deleting some from already saved ones or adding news ones from the Top 3 list and/or from the random quote section.
+- **User own quotes**. 
 - **A random quote**. It loads a random quotes from the API. 
+The user can manage their quotes, by deleting quotes from already saved ones and/or adding news ones from the Top 3 list and/or from the random quote section.
 
 <img src="https://github.com/Z-Monika/BreakingBadFan-App/blob/main/BreakingBadFanAppScreens/Quotes_scene.png" height="500">
 
