@@ -20,7 +20,7 @@ This application uses Breaking Bad API: @ https://breakingbadapi.com.
 
 <img src="https://github.com/Z-Monika/BreakingBadFan-App/blob/main/BreakingBadFanAppScreens/Registration_Login_scene.png" height="500"> <img src="https://github.com/Z-Monika/BreakingBadFan-App/blob/main/BreakingBadFanAppScreens/Home_scene.png" height="500">
 
-A logged in user is remembered between application restarts, until the user logs out.
+The logged in user is remembered between application restarts, until the user logs out.
 
 ## Episodes and Episode details screen
 
