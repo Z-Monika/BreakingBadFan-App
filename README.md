@@ -22,7 +22,7 @@ Logged in user is  remembered between application restarts, until the user logs 
 
 ![576vibtNZGvQJBSDv3THrD](https://github.com/Z-Monika/BreakingBadFan-App/blob/main/BreakingBadFanAppScreens/Registration_Login_scene.png)
 
-<img src="https://github.com/Z-Monika/BreakingBadFan-App/blob/main/BreakingBadFanAppScreens/Registration_Login_scene.png" height="500">
+<img src="https://github.com/Z-Monika/BreakingBadFan-App/blob/main/BreakingBadFanAppScreens/Registration_Login_scene.png" height="700">
 
 ## Home scene
 
