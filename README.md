@@ -69,8 +69,7 @@ Episode detail scene provides further details about the episode to the user and 
 
 Character detail scene provides further details about the character to the user and a list of character's famous quotes. User can save favorite quotes.  If a quote is already included among user's favotires, a filled heart icon is displayed next to the quote. 
 
-!
-[geVQcBdaM6oabqYdtnWg3A-2](https://github.com/Z-Monika/BreakingBadFan-App/blob/main/BreakingBadFanAppScreens/Character_details_scene.png?raw=true)
+![geVQcBdaM6oabqYdtnWg3A-2](https://github.com/Z-Monika/BreakingBadFan-App/blob/main/BreakingBadFanAppScreens/Character_details_scene.png?raw=true)
 
 
 ## Quotes Scene
@@ -82,8 +81,7 @@ Displays `UITableView` with 3 sections (should not show empty sections).
 - **User own quotes**. 
 - **A random quote**. It loads a random quotes from the API. 
 
-!
-[geVQcBdaM6oabqYdtnWg3A-2](https://github.com/Z-Monika/BreakingBadFan-App/blob/main/BreakingBadFanAppScreens/Quotes_scene.png)
+![geVQcBdaM6oabqYdtnWg3A-2](https://github.com/Z-Monika/BreakingBadFan-App/blob/main/BreakingBadFanAppScreens/Quotes_scene.png)
 
 # Release
 
