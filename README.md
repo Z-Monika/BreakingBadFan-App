@@ -20,18 +20,18 @@ This application uses Breaking Bad API: @ https://breakingbadapi.com.
 ## Registration/Login scene
 Logged in user is  remembered between application restarts, until the user logs out.
 
-<img src="https://github.com/Z-Monika/BreakingBadFan-App/blob/main/BreakingBadFanAppScreens/Registration_Login_scene.png" height="700">
+<img src="https://github.com/Z-Monika/BreakingBadFan-App/blob/main/BreakingBadFanAppScreens/Registration_Login_scene.png" height="600">
 
 ## Home scene
 
-<img src="https://github.com/Z-Monika/BreakingBadFan-App/blob/main/BreakingBadFanAppScreens/Home_scene.png" height="700">
+<img src="https://github.com/Z-Monika/BreakingBadFan-App/blob/main/BreakingBadFanAppScreens/Home_scene.png" height="600">
 
 
 ## Episodes scene
 
 The screen displays the list of episodes grouped by seasons. Upon selecting an episode, episode detail scene is presented to the user. It provides  further details about the episode and a list of characters that appeared in the selected episode. If user selects a character, he/she is taken to the character detail view, where character's famous quotes are displayed. 
 
-![fTeWHgtXVRkraSD1HD7RSg-2](https://github.com/Z-Monika/BreakingBadFan-App/blob/main/BreakingBadFanAppScreens/Episodes_scene.png)
+<img src="https://github.com/Z-Monika/BreakingBadFan-App/blob/main/BreakingBadFanAppScreens/Episodes_scene.png" height="600">
 
 ## Filter Episodes scene
 
@@ -41,13 +41,13 @@ User can filter episodes by multiple criteria. Notably by:
 - From and to air dates
 - Character appearances
 
-![geVQcBdaM6oabqYdtnWg3A](https://github.com/Z-Monika/BreakingBadFan-App/blob/main/BreakingBadFanAppScreens/Filter_episodes_scene.png)
-
+<img src="https://github.com/Z-Monika/BreakingBadFan-App/blob/main/BreakingBadFanAppScreens/Filter_episodes_scene.png" height="600">
 
 ## Characters scene
 
 The screen displays the list of characters grouped alphabetically. When character is selected user is provided with further details about the character as well as character's favorite quotes. Upon selecting a character, character detail scene is presented to the user, where character's famous quotes are displayed. 
-![geVQcBdaM6oabqYdtnWg3A-2](https://github.com/Z-Monika/BreakingBadFan-App/blob/main/BreakingBadFanAppScreens/Characters_scene.png)
+
+<img src="https://github.com/Z-Monika/BreakingBadFan-App/blob/main/BreakingBadFanAppScreens/Characters_scene.png" height="600">
 
 ## Filter Characters scene
 
@@ -56,20 +56,19 @@ User can filter characters by multiple criteria. Notably by:
 - Character life status (i.e. alive or deceased)
 - Season fetures
 
-![geVQcBdaM6oabqYdtnWg3A-2](https://github.com/Z-Monika/BreakingBadFan-App/blob/main/BreakingBadFanAppScreens/Filter_characters_sce%20ne.png)
+<img src="https://github.com/Z-Monika/BreakingBadFan-App/blob/main/BreakingBadFanAppScreens/Filter_characters_sce%20ne.png" height="600">
 
 ## Episode details scene
 
 Episode detail scene provides further details about the episode to the user and a list of characters that appeared in the selected episode. Upon selecting a character, character detail scene is presented to the user, where character's famous quotes are displayed. 
 
-![geVQcBdaM6oabqYdtnWg3A-2](https://github.com/Z-Monika/BreakingBadFan-App/blob/main/BreakingBadFanAppScreens/Episode_details_scene.png)
+<img src="https://github.com/Z-Monika/BreakingBadFan-App/blob/main/BreakingBadFanAppScreens/Episode_details_scene.png" height="600">
 
 ## Character details scene
 
 Character detail scene provides further details about the character to the user and a list of character's famous quotes. User can save favorite quotes.  If a quote is already included among user's favotires, a filled heart icon is displayed next to the quote. 
 
-![geVQcBdaM6oabqYdtnWg3A-2](https://github.com/Z-Monika/BreakingBadFan-App/blob/main/BreakingBadFanAppScreens/Character_details_scene.png?raw=true)
-
+<img src="https://github.com/Z-Monika/BreakingBadFan-App/blob/main/BreakingBadFanAppScreens/Character_details_scene.png" height="600">
 
 ## Quotes Scene
 
@@ -80,7 +79,7 @@ Displays `UITableView` with 3 sections (should not show empty sections).
 - **User own quotes**. 
 - **A random quote**. It loads a random quotes from the API. 
 
-![geVQcBdaM6oabqYdtnWg3A-2](https://github.com/Z-Monika/BreakingBadFan-App/blob/main/BreakingBadFanAppScreens/Quotes_scene.png)
+<img src="https://github.com/Z-Monika/BreakingBadFan-App/blob/main/BreakingBadFanAppScreens/Quotes_scene.png" height="600">
 
 # Release
 
