@@ -63,4 +63,4 @@ The user can manage their quotes, by deleting quotes from already saved ones and
 
 # Release
 
-The work was submitted for revision on **2021-03-08**. It was evaluated on three criteria: **user side**, **code functionality** and **code cleanliness**.
+The work was submitted for revision on **2021-03-08**.
